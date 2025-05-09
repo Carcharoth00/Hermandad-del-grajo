@@ -1,0 +1,86 @@
+:root {
+    --primary-color: #b81414;
+    --secundary-color: #4D7358;
+
+    --primary-font: "Metamorphous", serif;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    width: 100dvw;
+    min-height: 100dvh;
+}
+
+.quicksand {
+    font-family: "Quicksand", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.section-map {
+    height: 100vh;
+    width: 100vw; 
+    background-image: url('../imagenes/index/barovia.png'); 
+    background-size: cover; 
+    background-position: center top; 
+    background-repeat: no-repeat; 
+    overflow: hidden; 
+    position: relative;
+}
+
+.boton-map {
+    height: 22vh;
+    width: 15vw;
+}
+
+.boton-map:hover{
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+}
+
+#boton-cronica{
+    position: absolute;
+    top: 45vh;
+    left: 4vw;
+}
+
+#boton-pj{
+    position: absolute;
+    top: 45vh;
+    left: 21vw;
+}
+
+#boton-pnj{
+    position: absolute;
+    top: 45vh;
+    left: 60vw;
+}
+
+#boton-galeria{
+    position: absolute;
+    top: 45vh;
+    left: 78vw;
+}
+
+#boton-inic{
+    position: absolute;
+    top: 45vh;
+    left: 40vw;
+}
+
+.logo-grajos {
+    width: 115px;
+    height: 115px;
+    position: absolute;
+    top: 3vh;
+    left: 75vw;
+}

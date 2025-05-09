@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Personajes</title>
+   <link rel="stylesheet" href="../estilos/personajes.css">
+   <link rel="stylesheet" href="../estilos/generales/nav-bar.css">
+   <link rel="stylesheet" href="../estilos/generales/modal.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Metamorphous&display=swap" rel="stylesheet">
+</head>
+
+<body>
+   <div class="nav-bar" id="nav-bar">
+      <a href="../index.html"><img class="nav-bar-logo" src="../imagenes/nav-bar/hermandad-del-grajo-foto.png"></a>
+      <a class="nav-bar-texto" href="../index.html">INICIO</a>
+      <a class="nav-bar-texto" href="../vistas/cronica.html">CRÓNICA</a>
+      <a class="nav-bar-texto" href="../vistas/galeria.html">GALERÍA</a>
+      <a class="nav-bar-texto" href="../vistas/pnjs.html">PNJS</a>
+      <a class="nav-bar-texto-users" href="../vistas/iniciarSesion.html">Iniciar sesión</a>
+   </div>
+   <header class="cd-header" data-type="slider-item">
+      <img class="logo-header" src="../imagenes/personajes/hermandad-del-grajo-silueta.png">
+      <h1>Atrévete a conocer a los que se aventuran en las sombras</h1>
+   </header>
+
+   <section class="cd-fixed-background img-1" id="vi" data-type="slider-item">
+   </section>
+
+   <section class="cd-fixed-background img-2" id="pipa" data-type="slider-item">
+   </section>
+
+   <section class="cd-fixed-background img-3" id="krenk" data-type="slider-item">
+   </section>
+
+   <section class="cd-fixed-background img-4" id="kalan" data-type="slider-item">
+   </section>
+
+   <nav>
+      <ul class="cd-vertical-nav">
+         <li><a href="#0" class="cd-prev inactive"></a></li>
+         <li><a href="#0" class="cd-next"></a></li>
+      </ul>
+   </nav>
+
+   <div id="modalOverlay" style="display: none;" class="modal-overlay"></div>
+   <div class="modal">
+      <section class="modal-contenido">
+         <img class="modal-img mod-pj" id="myImg">
+         <p class="modal-nombre"></p>
+         <p class="modal-text"></p>
+      </section>
+      <a class="cerrar-modal"><img src="../imagenes/iconos/cruz.png"></a>
+
+   </div>
+
+   <script src="../scripts/generales/nav-bar.js"></script>
+   <script src="../scripts/bibliotecas/jquery-2.1.1.js"></script>
+   <script src="../scripts/personajes.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+    <link rel="stylesheet" href="../estilos/inicioSesion.css">
+</head>
+
+<body>
+    <div class="login-container">
+        <!-- <a href="../vistas/privado.php"> --><img class="inicio-sesion-logo" src="../imagenes/nav-bar/hermandad-del-grajo-foto.png"></img><!-- </a> -->
+        <form id="login" action="../vistas/privado.php" method="post">
+            <h2>Iniciar Sesión</h2>
+            <div class="form-group">
+                <label for="username">Usuario:</label>
+                <input type="text" id="username" name="user" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" name="pass" required>
+            </div>
+            <button type="submit">Ingresar</button>
+            <button type="button" id="botonRegistro">Crear Cuenta</button>
+            <button type="button" onclick="window.location.href='../index.html'" style="font-size: 0.8em;">Volver al
+                Inicio</button>
+        </form>
+        <form id="registro" action="../controladores/controladoresUsuarios/controladorUsuario.php" method="post" style="display: none">
+            <h2>Crear nueva cuenta</h2>
+            <div class="form-group">
+                <label for="username">Usuario:</label>
+                <input type="text" id="user" name="user" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Contraseña:</label>
+                <input type="password" id="pass" name="pass" required>
+            </div>
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+            <input name="opt" type="hidden" value="1" />
+            <input name="autoLogin" type="hidden" value="true" />
+            <button type="submit">Crear Cuenta</button>
+            <button type="button" id="botonAtras" style="font-size: 0.8em;">Atrás</button>
+        </form>
+    </div>
+    <script src="../scripts/iniciarSesion.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- <?php
+session_start();
+include "security/sec.php";
+
+if (isset($_SESSION["log"])) { //Si existe la variable sesion log
+    if ($_SESSION["log"] == false) { // Si no estamos logeados, entramos a logear
+        include "./security/sec.php";
+    }
+} else {
+    header("Location: /vistas/login.php");
+}
+
+?> -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Hermandad del Grajo</title>
+    <link rel="stylesheet" href="./estilos/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fugaz+One&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Quicksand:wght@300..700&display=swap"
+        rel="stylesheet">
+</head>
+<body>
+    <section class="section-map">
+        <a href="./vistas/cronica.html">
+            <img class="boton-map" id="boton-cronica" src="imagenes/index/boton-cronica.png" alt="Crónica">
+        </a>
+        <a href="./vistas/personajes.html">
+            <img class="boton-map" id="boton-pj" src="imagenes/index/boton-personajes-jugadores.png">
+        </a>
+        <a href="./vistas/pnjs.html">
+            <img class="boton-map" id="boton-pnj" src="imagenes/index/boton-personajes-no-jugadores.png">
+        </a>
+        <a href="./vistas/galeria.html">
+            <img class="boton-map" id="boton-galeria" src="imagenes/index/boton-galeria.png">
+        </a>
+        <a href="./vistas/iniciarSesion.html">
+            <img class="boton-map" id="boton-inic" src="imagenes/index/boton-iniciar-sesion.png">
+        </a>
+    </section>
+   
+</body>
+
+</html>

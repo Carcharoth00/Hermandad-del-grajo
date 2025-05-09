@@ -1,0 +1,149 @@
+/* .modal{
+    display: none; 
+    position: fixed; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    z-index: 1000; 
+    background-color: rgb(0, 0, 0); 
+    padding: 20px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    border-radius: 5px;
+    border: 2px solid #c3c6ce;
+    max-width: 90%;
+    max-height: 90%;
+    overflow: auto;
+    margin-top: 20px; 
+}
+
+.modal--show{
+    opacity: 1;
+    pointer-events: unset;
+    transition: opacity 0.6s;
+    display: block;
+}
+
+.cerrar-modal {
+    text-decoration: none;
+    color: #fff;
+    background-color: #f26250;
+    padding: 1em 3em;
+    border: 1px solid #000000;
+    border-radius: 6px;
+    display: inline-block;
+    font-weight: 300px;
+    transition: background-color 0.3s;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+
+.modal-overlay {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    z-index: 999; 
+}
+
+
+ */
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    /* background-color: #000000; */
+    background: url(../../imagenes/cronica/fondo-pergamino.avif);
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    max-width: 90%;
+    max-height: 90%;
+    overflow: hidden;
+}
+
+.modal--show {
+    display: block;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.mod-pj {
+    max-width: 62% !important;
+}
+
+.modal-contenido {
+    display: flex;
+    align-items: center;
+}
+
+.modal-img {
+    width: 50vw;
+    height: 65vh;
+}
+
+.modal-text {
+    color: #000000;
+    font-family: var(--primary-font);
+    font-size: 25px;
+    padding: 20px;
+}
+
+.modal-nombre {
+    color: #000000;
+    font-family: var(--primary-font);
+    font-size: 25px;
+    padding: 20px;
+}
+
+.modal img {
+    max-width: 100%;
+    max-height: 80vh;
+    display: block;
+    margin: 0 auto;
+}
+
+.cerrar-modal {
+    text-decoration: none;
+    /* color: #fff; */
+    /* background-color: var(--primary-color); */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    display: inline-block;
+    /* font-weight: bold; */
+    cursor: pointer;
+    /* transition: background-color 0.3s; */
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    height: 40px;
+    width: 40px;
+}
+
+/* .cerrar-modal:hover {
+    background-color: grey;
+} */
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.modal-overlay--show {
+    display: block;
+}

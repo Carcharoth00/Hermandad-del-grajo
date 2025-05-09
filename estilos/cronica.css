@@ -1,0 +1,62 @@
+.layout {
+    display: flex;
+    height: 100vh;
+}
+
+body,
+html {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    background: url(../imagenes/cronica/fondo-pergamino.avif);
+    background-size: cover;
+}
+
+.leyenda {
+    width: 18%;
+    overflow-y: auto;
+    margin-left: 15px;
+    margin-top: 90px;
+    font-family: var(--primary-font);
+}
+
+.cuerpo {
+    width: 78%;
+    padding: 20px;
+    overflow-y: auto;
+    margin-top: 85px;
+    font-family: var(--primary-font);
+}
+
+.indice ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.indice ul li {
+    margin: 10px 0;
+}
+
+.indice ul li a {
+    text-decoration: none;
+    color: #000;
+}
+
+.parrafo {
+    margin-top: 90px;
+    font-family: var(--primary-font);
+}
+
+.indice ul li a h1 {
+    font-size: 24px;
+    margin: 0;
+    color: #000;
+    text-decoration: none;
+}
+
+.indice ul li a h2 {
+    font-size: 18px;
+    margin: 0;
+    color: #000;
+    text-decoration: none;
+}

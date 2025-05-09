@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+html,
+body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    background: url(../imagenes/galeria/papel.webp);
+    background-size: cover;
+}
+
+.cuadros {
+    position: absolute;
+} 
+
+#cuadro-1 {
+    height: 78vh;
+    width: 49vw;
+    top: 8%;
+    left: -2%;
+} 
+
+#cuadro-2 {
+    height: 40vh;
+    width: 25vw;
+    top: 10%;
+    left: 41%;
+} 
+
+#cuadro-3 {
+    height: 40vh;
+    width: 25vw;
+    top: 183%;
+    left: 24%;
+}
+
+#cuadro-4 {
+    height: 45vh;
+    width: 32vw;
+    top: 8%;
+    left: 64%;
+}
+
+#cuadro-5 {
+    height: 45vh;
+    width: 32vw;
+    top: 175%;
+    left: -1%;
+}
+
+#cuadro-6 {
+    height: 45vh;
+    width: 32vw;
+    top: 44%;
+    left: 41%;
+}
+
+#cuadro-7 {
+    height: 45vh;
+    width: 30vw;
+    top: 89%;
+    left: 68%;
+}
+
+#cuadro-8 {
+    height: 90vh;
+    width: 52vw;
+    top: 135%;
+    left: 47%;
+}
+
+#cuadro-9 {
+    height: 64vh;
+    width: 44vw;
+    top: 124%;
+    left: 3%;
+}
+
+#cuadro-10 {
+    height: 39vh;
+    width: 21vw;
+    top: 52%;
+    left: 74%;
+}
+
+#cuadro-11 {
+    height: 51vh;
+    width: 33vw;
+    top: 218%;
+    left: 3%;
+}
+
+#cuadro-12 {
+    height: 45vh;
+    width: 32vw;
+    top: 221%;
+    left: 63%;
+}
+
+#cuadro-13 {
+    height: 58vh;
+    width: 35vw;
+    top: 77%;
+    left: 35%;
+}
+
+#cuadro-14 {
+    height: 54vh;
+    width: 32vw;
+    top: 82%;
+    left: 3%;
+}
+
+#cuadro-15 {
+    height: 45vh;
+    width: 32vw;
+    top: 220%;
+    left: 34%;
+}

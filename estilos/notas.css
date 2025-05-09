@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+html,
+body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    background: url(../imagenes/cronica/fondo-pergamino.avif);
+    background-size: cover;
+}
+
+.listado {
+    width: 18%;
+    overflow-y: auto;
+    margin-left: 15px;
+    margin-top: 90px;
+    font-family: var(--primary-font);
+}
+
+.cuerpo {
+    width: 78%;
+    padding: 20px;
+    overflow-y: auto;
+    margin-top: 85px;
+    font-family: var(--primary-font);
+}

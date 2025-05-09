@@ -1,0 +1,136 @@
+:root {
+  --primary-color: #b81414;
+  --secundary-color: #4D7358;
+
+  --primary-font: "Metamorphous", serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+html,
+body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.cd-header {
+  position: relative;
+  height: 100%;
+  background-color: var(--primary-color);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+
+  h1 {
+    position: absolute;
+    width: 90%;
+    color: #f2e6cd;
+    text-align: center;
+    font-size: 2.2rem;
+    font-family: var(--primary-font);
+    left: 50%;
+    top: 65%;
+    bottom: auto;
+    right: auto;
+    transform: translateX(-50%) translateY(-50%);
+  }
+}
+
+.logo-header {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+
+}
+
+.cd-content {
+  max-width: 50vw;
+  margin-top: 40vh;
+}
+
+.cd-fixed-background {
+  height: 100%;
+  position: relative;
+  padding: 3em 5% 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+
+}
+
+.cd-fixed-background.img-1 {
+  background-image: url("../imagenes/personajes/fondo-vi.jpg");
+}
+
+.cd-fixed-background.img-2 {
+  background-image: url("../imagenes/personajes/fondo-pipa.jpg");
+}
+
+.cd-fixed-background.img-3 {
+  background-image: url("../imagenes/personajes/fondo-kren.jpg");
+}
+
+.cd-fixed-background.img-4 {
+  background-image: url("../imagenes/personajes/fondo-kalan.jpg");
+}
+
+.cd-vertical-nav {
+  position: fixed;
+  z-index: 4;
+  right: 3%;
+  top: 50%;
+  bottom: auto;
+  transform: translateY(-50%);
+  background: none;
+}
+
+.cd-vertical-nav a {
+  display: block;
+  height: 40px;
+  width: 40px;
+  overflow: hidden;
+  background: transparent url(../imagenes/iconos/cd-icon-arrow.svg) no-repeat center center;
+  transition: opacity 0.2s 0s, visibility 0.2s 0s;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.cd-vertical-nav a.cd-prev {
+  transform: rotate(180deg);
+  margin-bottom: 10px;
+}
+
+.cd-vertical-nav a.inactive {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.2s 0s, visibility 0s 0.2s;
+}
+
+.metamorphous-regular {
+  font-family: "Metamorphous", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.cd-text {
+  position: fixed;
+  left: 76%;
+  top: 62%;
+  transform: translate(-50%, -50%);
+  font-family: var(--primary-font);
+  color: rgb(0, 0, 0);
+  font-size: 25px;
+  letter-spacing: 2px;
+}
+
