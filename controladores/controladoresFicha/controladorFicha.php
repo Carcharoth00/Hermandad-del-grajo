@@ -44,7 +44,7 @@ switch ($opt) {
 
         // Habilidades
         $Acrobatics = filter_input(INPUT_POST, 'Acrobatics', FILTER_SANITIZE_NUMBER_INT);
-        $AnimalHandling = filter_input(INPUT_POST, 'Animal Handling', FILTER_SANITIZE_NUMBER_INT);
+        $AnimalHandling = filter_input(INPUT_POST, 'AnimalHandling', FILTER_SANITIZE_NUMBER_INT);
         $Arcana = filter_input(INPUT_POST, 'Arcana', FILTER_SANITIZE_NUMBER_INT);
         $Athletics = filter_input(INPUT_POST, 'Athletics', FILTER_SANITIZE_NUMBER_INT);
         $Deception = filter_input(INPUT_POST, 'Deception', FILTER_SANITIZE_NUMBER_INT);
@@ -58,7 +58,7 @@ switch ($opt) {
         $Performance = filter_input(INPUT_POST, 'Performance', FILTER_SANITIZE_NUMBER_INT);
         $Persuasion = filter_input(INPUT_POST, 'Persuasion', FILTER_SANITIZE_NUMBER_INT);
         $Religion = filter_input(INPUT_POST, 'Religion', FILTER_SANITIZE_NUMBER_INT);
-        $SleightOfHand = filter_input(INPUT_POST, 'Sleight of Hand', FILTER_SANITIZE_NUMBER_INT);
+        $SleightOfHand = filter_input(INPUT_POST, 'SleightOfHand', FILTER_SANITIZE_NUMBER_INT);
         $Stealth = filter_input(INPUT_POST, 'Stealth', FILTER_SANITIZE_NUMBER_INT);
         $Survival = filter_input(INPUT_POST, 'Survival', FILTER_SANITIZE_NUMBER_INT);
 
@@ -91,6 +91,7 @@ switch ($opt) {
         $ep = filter_input(INPUT_POST, 'ep', FILTER_SANITIZE_NUMBER_INT);
         $gp = filter_input(INPUT_POST, 'gp', FILTER_SANITIZE_NUMBER_INT);
         $pp = filter_input(INPUT_POST, 'pp', FILTER_SANITIZE_NUMBER_INT);
+        $equipo = filter_input(INPUT_POST, 'equipo', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
         // Rasgos y características
         $personality = filter_input(INPUT_POST, 'personality', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
@@ -100,7 +101,13 @@ switch ($opt) {
         $features = filter_input(INPUT_POST, 'features', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
         // Llama a la función para actualizar la ficha
-        $ficha->modificarFicha($charname, $classlevel, $background, $playername, $race, $alignment, $experiencepoints, $Strengthscore, $Strengthmod, $Dexterityscore, $Dexteritymod, $Constitutionscore, $Constitutionmod, $Wisdomscore, $Wisdommod, $Intelligencescore, $Intelligencemod, $Charismascore, $Charismamod, $proficiencybonus, $Strength_save, $Dexterity_save, $Constitution_save, $Wisdom_save, $Intelligence_save, $Charisma_save, $Acrobatics, $AnimalHandling, $Arcana, $Athletics, $Deception, $History, $Insight, $Intimidation, $Investigation, $Medicine, $Nature, $Perception, $Performance, $Persuasion, $Religion, $SleightOfHand, $Stealth, $Survival, $passiveperception, $otherprofs, $ac, $initiative, $speed, $maxhp, $currenthp, $temphp, $totalhd, $remaininghd, $atkname1, $atkbonus1, $atkdamage1, $atkname2, $atkbonus2, $atkdamage2, $atkname3, $atkbonus3, $atkdamage3, $cp, $sp, $ep, $gp, $pp, $personality, $ideals, $bonds, $flaws, $features, $id);
+        $ficha->modificarFicha($charname, $classlevel, $background, $playername, $race, $alignment, $experiencepoints, 
+        $Strengthscore,$Strengthmod, $Dexterityscore, $Dexteritymod, $Constitutionscore, $Constitutionmod, $Wisdomscore, $Wisdommod, $Intelligencescore, $Intelligencemod, $Charismascore, $Charismamod, 
+        $proficiencybonus, $Strength_save,$Dexterity_save, $Constitution_save, $Wisdom_save, $Intelligence_save, $Charisma_save, 
+        $Acrobatics, $AnimalHandling, $Arcana, $Athletics, $Deception, $History, $Insight, $Intimidation, $Investigation, $Medicine, $Nature, $Perception, $Performance, $Persuasion, $Religion, $SleightOfHand, $Stealth, $Survival, 
+        $passiveperception, $otherprofs, $ac, $initiative, $speed, $maxhp, $currenthp, 
+        $temphp, $totalhd, $remaininghd, $atkname1, $atkbonus1, $atkdamage1, $atkname2, $atkbonus2, $atkdamage2, $atkname3, $atkbonus3, $atkdamage3, 
+        $cp, $sp, $ep, $gp, $pp, $personality, $ideals, $bonds, $flaws, $features, $equipo, $id);
         break;
 
 

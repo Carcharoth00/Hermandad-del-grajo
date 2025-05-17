@@ -2,13 +2,17 @@
 
 class FuncionesFicha
 {
-    public function modificarFicha($charname, $classlevel, $background, $playername, $race, $alignment, $experiencepoints, $Strengthscore, $Strengthmod, $Dexterityscore, $Dexteritymod, $Constitutionscore, $Constitutionmod, $Wisdomscore, $Wisdommod, $Intelligencescore, $Intelligencemod, $Charismascore, $Charismamod, $proficiencybonus, $Strength_save, $Dexterity_save, $Constitution_save, $Wisdom_save, $Intelligence_save, $Charisma_save, $Acrobatics, $AnimalHandling, $Arcana, $Athletics, $Deception, $History, $Insight, $Intimidation, $Investigation, $Medicine, $Nature, $Perception, $Performance, $Persuasion, $Religion, $SleightOfHand, $Stealth, $Survival, $passiveperception, $otherprofs, $ac, $initiative, $speed, $maxhp, $currenthp, $temphp, $totalhd, $remaininghd, $atkname1, $atkbonus1, $atkdamage1, $atkname2, $atkbonus2, $atkdamage2, $atkname3, $atkbonus3, $atkdamage3, $cp, $sp, $ep, $gp, $pp, $personality, $ideals, $bonds, $flaws, $features, $id)
+    public function modificarFicha($charname, $classlevel, $background, $playername, $race, $alignment, $experiencepoints, 
+    $Strengthscore, $Strengthmod, $Dexterityscore, $Dexteritymod, $Constitutionscore, $Constitutionmod, $Wisdomscore, $Wisdommod, $Intelligencescore, $Intelligencemod, $Charismascore, $Charismamod, 
+    $proficiencybonus, $Strength_save, $Dexterity_save, $Constitution_save, $Wisdom_save, $Intelligence_save, $Charisma_save, $Acrobatics, $AnimalHandling, $Arcana, $Athletics, $Deception, $History, 
+    $Insight, $Intimidation, $Investigation, $Medicine, $Nature, $Perception, $Performance, $Persuasion, $Religion, $SleightOfHand, $Stealth, $Survival, $passiveperception, $otherprofs, $ac, 
+    $initiative, $speed, $maxhp, $currenthp, $temphp, $totalhd, $remaininghd, $atkname1, $atkbonus1, $atkdamage1, $atkname2, $atkbonus2, $atkdamage2, $atkname3, $atkbonus3, $atkdamage3, 
+    $cp, $sp, $ep, $gp, $pp, $personality, $ideals, $bonds, $flaws, $features, $equipo, $id)
     {
         include "../conexionBBDD.php";
 
 
-        $filt = $con->prepare("UPDATE fichas SET charname = ?,
-                    classlevel = ?, background = ?, playername = ?, race = ?, alignment = ?, experiencepoints = ?, 
+        $filt = $con->prepare("UPDATE fichas SET charname = ?, classlevel = ?, background = ?, playername = ?, race = ?, alignment = ?, experiencepoints = ?, 
                     Strengthscore = ?, Strengthmod = ?, Dexterityscore = ?, Dexteritymod = ?, Constitutionscore = ?, Constitutionmod = ?, 
                     Wisdomscore = ?, Wisdommod = ?, Intelligencescore = ?, Intelligencemod = ?, Charismascore = ?, Charismamod = ?, 
                     proficiencybonus = ?, Strength_save = ?, Dexterity_save = ?, Constitution_save = ?, Wisdom_save = ?, Intelligence_save = ?, 
@@ -17,20 +21,9 @@ class FuncionesFicha
                     SleightOfHand = ?, Stealth = ?, Survival = ?, passiveperception = ?, otherprofs = ?, ac = ?, initiative = ?, speed = ?, 
                     maxhp = ?, currenthp = ?, temphp = ?, totalhd = ?, remaininghd = ?, atkname1 = ?, atkbonus1 = ?, atkdamage1 = ?, 
                     atkname2 = ?, atkbonus2 = ?, atkdamage2 = ?, atkname3 = ?, atkbonus3 = ?, atkdamage3 = ?, cp = ?, sp = ?, ep = ?, gp = ?, 
-                    pp = ?, personality = ?, ideals = ?, bonds = ?, flaws = ?, features = ? 
-                WHERE ID_ficha = ?");
+                    pp = ?, personality = ?, ideals = ?, bonds = ?, flaws = ?, features = ?, equipo = ? WHERE ID_ficha = ?");
 
-        if (!$con || $con->connect_error) {
-            echo "<script>alert('Error de conexión: {$con->connect_error}');</script>";
-        } else {
-            echo "<script>alert('Conexión exitosa.');</script>";
-        }
-
-        if (!$filt) {
-            echo "<script>alert('Error en la preparación de la consulta: {$con->error}');</script>";
-        }
-        $filt->bind_param(
-            "sssssssiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiisssssssssssssi",
+        $filt->bind_param("ssssssiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiisiiiiiisssississisiiiiissssssi",
             $charname,
             $classlevel,
             $background,
@@ -104,13 +97,10 @@ class FuncionesFicha
             $bonds,
             $flaws,
             $features,
+            $equipo,
             $id
         );
-        if (!$filt->execute()) {
-            echo "<script>alert('Error al ejecutar la consulta: {$filt->error}');</script>";
-        }
-        /* $filt->execute(); */
-        echo "Consulta ejecutada correctamente.";
+        $filt->execute();
         $con->close();
     }
 

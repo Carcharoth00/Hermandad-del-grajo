@@ -111,6 +111,7 @@ class funcionesUsuarios
             ep = '', 
             gp = '', 
             pp = '', 
+            equipo = '',
             personality = '', 
             ideals = '', 
             bonds = '', 
