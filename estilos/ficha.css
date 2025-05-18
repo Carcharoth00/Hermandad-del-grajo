@@ -754,3 +754,31 @@ form.charsheet main section.features div textarea {
   padding: 5px;
   height: 43em;
 }
+
+.guardar-btn {
+                background: linear-gradient(135deg, #bfa76a 0%, #6b4f1d 100%);
+                color: #f5e6c5;
+                border: 3px solid #7c5c2b;
+                border-radius: 10px;
+                padding: 14px 38px;
+                font-size: 1.2em;
+                font-family: 'Metamorphous', cursive;
+                letter-spacing: 2px;
+                box-shadow: 0 4px 16px rgba(80,60,20,0.25), 0 0 0 4px #e2c275 inset;
+                cursor: pointer;
+                transition: background 0.3s, transform 0.2s;
+            }
+            .guardar-btn:hover {
+                background: linear-gradient(135deg, #e2c275 0%, #7c5c2b 100%);
+                transform: translateY(-2px) scale(1.03);
+            }
+            .guardar-btn-content {
+                display: inline-flex;
+                align-items: center;
+            }
+            .guardar-btn-icon {
+                margin-right: 10px;
+            }
+            .guardar-btn-text {
+                text-shadow: 1px 1px 2px #7c5c2b, 0 0 8px #e2c275;
+            }

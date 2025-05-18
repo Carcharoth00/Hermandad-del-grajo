@@ -30,10 +30,6 @@ include "../controladores/conexionBBDD.php";
 <body>
     <div class="nav-bar" id="nav-bar">
         <a href="../index.html"><img class="nav-bar-logo" src="../imagenes/nav-bar/hermandad-del-grajo-foto.png"></a>
-        <a class="nav-bar-texto" href="../index.html">INICIO</a>
-        <a class="nav-bar-texto" href="../vistas/cronica.html">CRÓNICA</a>
-        <a class="nav-bar-texto" href="../vistas/personajes.html">PERSONAJES</a>
-        <a class="nav-bar-texto" href="../vistas/pnjs.html">PNJS</a>
         <?php if (isset($_SESSION["log"]) && $_SESSION["log"] == 1): ?>
             <a class="nav-bar-texto-users"
                 href="../security/logout.php"><?php echo htmlspecialchars($_SESSION["nombre"]) . " - Cerrar sesión"; ?></a>
@@ -52,10 +48,6 @@ include "../controladores/conexionBBDD.php";
             <a href="./zonaPrivada/ficha.php"><img src="../imagenes/privado/notas.png" alt="fichas logo"></a>
             <p>Fichas</p>
         </div>
-        <!-- <div class="flotante">
-        <img src="../imagenes/flotante3.jpg" alt="Imagen 3">
-        <p>Texto 3</p>
-    </div> -->
     </div>
 
     <!-- <div class="tituloPersonal">

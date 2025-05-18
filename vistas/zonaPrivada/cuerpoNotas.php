@@ -13,8 +13,10 @@ for ($i = 0; $i < $res->num_rows; $i++) {
     $fila = $res->fetch_assoc();
     ?>
     <div class="marco-notas">
-        <textarea data-laid="<?php echo $fila["ID_nota"] ?>" id="nweNombreNota_<?php echo $fila['ID_nota'] ?>"
+        <label for="newNombreNota_<?php echo $fila['ID_nota'] ?>">Nombre de la nota:</label>
+        <textarea data-laid="<?php echo $fila["ID_nota"] ?>" id="newNombreNota_<?php echo $fila['ID_nota'] ?>"
             class="nombreNota"><?php echo $fila['Nombre_nota'] ?></textarea>
+        Cuerpo de la nota:    
         <textarea data-laid="<?php echo $fila["ID_nota"] ?>" id="newCuerpoNota_<?php echo $fila['ID_nota'] ?>"
             class="cuerpoNota"><?php echo $fila['Cuerpo_nota'] ?></textarea>
     </div>
@@ -26,7 +28,7 @@ for ($i = 0; $i < $res->num_rows; $i++) {
         $(".nombreNota").change(function () {
             let ids = $(this).data("laid");
             let opt = 0;
-            let nombreNota = $("#nweNombreNota_" + ids).val();
+            let nombreNota = $("#newNombreNota_" + ids).val();
             let cuerpoNota = $("#newCuerpoNota_" + ids).val();
 
             $.ajax({

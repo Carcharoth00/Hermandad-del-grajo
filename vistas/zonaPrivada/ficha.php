@@ -34,10 +34,7 @@ include "../../controladores/conexionBBDD.php";
     <div class="nav-bar" id="nav-bar">
         <a href="../../index.html"><img class="nav-bar-logo"
                 src="../../imagenes/nav-bar/hermandad-del-grajo-foto.png"></a>
-        <a class="nav-bar-texto" href="../../index.html">INICIO</a>
-        <a class="nav-bar-texto" href="../../vistas/cronica.html">CRÓNICA</a>
-        <a class="nav-bar-texto" href="../../vistas/personajes.html">PERSONAJES</a>
-        <a class="nav-bar-texto" href="../../vistas/pnjs.html">PNJS</a>
+        <a class="nav-bar-texto" href="../privado.php">ZONA PRIVADA</a>
         <?php if (isset($_SESSION["log"]) && $_SESSION["log"] == 1): ?>
             <a class="nav-bar-texto-users"
                 href="../../security/logout.php"><?php echo htmlspecialchars($_SESSION["nombre"]) . " - Cerrar sesión"; ?></a>
@@ -492,7 +489,15 @@ include "../../controladores/conexionBBDD.php";
             <?php
         }
             ?>
-            <button type="submit" data-id="<?php echo $_SESSION['id']; ?>">Guardar</button>
+            <button type="submit" data-id="<?php echo $_SESSION['id']; ?>" class="guardar-btn">
+                <span class="guardar-btn-content">
+                    <svg width="22" height="22" fill="none" class="guardar-btn-icon" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="11" cy="11" r="10" fill="#bfa76a" stroke="#7c5c2b" stroke-width="2"/>
+                        <path d="M7 12l3 3 5-6" stroke="#6b4f1d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span class="guardar-btn-text">Guardar</span>
+                </span>
+            </button>
         </form>
     </fieldset>
     <script src="../../scripts/ficha.js"></script>
@@ -519,9 +524,9 @@ include "../../controladores/conexionBBDD.php";
                         alert("Hubo un error al guardar los datos.");
                     }
                 });
-                /* setTimeout(function () {
+                setTimeout(function () {
                     location.reload(true);
-                }, 1500); */
+                }, 1500);
             });
         });
     </script>

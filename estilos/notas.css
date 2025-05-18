@@ -7,6 +7,12 @@
     vertical-align: baseline;
 }
 
+.layout {
+    display: flex;
+    flex-direction: row;
+    gap: 20px; 
+}
+
 html,
 body {
     height: 100%;
