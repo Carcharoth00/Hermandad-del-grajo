@@ -13,12 +13,15 @@ for ($i = 0; $i < $res->num_rows; $i++) {
     $fila = $res->fetch_assoc();
     ?>
     <div class="marco-notas">
-        <label for="newNombreNota_<?php echo $fila['ID_nota'] ?>">Nombre de la nota:</label>
-        <textarea data-laid="<?php echo $fila["ID_nota"] ?>" id="newNombreNota_<?php echo $fila['ID_nota'] ?>"
-            class="nombreNota"><?php echo $fila['Nombre_nota'] ?></textarea>
-        Cuerpo de la nota:    
-        <textarea data-laid="<?php echo $fila["ID_nota"] ?>" id="newCuerpoNota_<?php echo $fila['ID_nota'] ?>"
-            class="cuerpoNota"><?php echo $fila['Cuerpo_nota'] ?></textarea>
+        <div class="notaform"> <label for="newNombreNota_<?php echo $fila['ID_nota'] ?>">Nombre de la nota:</label>
+            <textarea data-laid="<?php echo $fila["ID_nota"] ?>" id="newNombreNota_<?php echo $fila['ID_nota'] ?>"
+                class="nombreNota"><?php echo $fila['Nombre_nota'] ?></textarea>
+        </div>
+
+        <div class="notaform"><label>Cuerpo de la nota:</label>
+            <textarea data-laid="<?php echo $fila["ID_nota"] ?>" id="newCuerpoNota_<?php echo $fila['ID_nota'] ?>"
+                class="cuerpoNota"><?php echo $fila['Cuerpo_nota'] ?></textarea>
+        </div>
     </div>
     <?php
 }

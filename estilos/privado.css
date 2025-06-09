@@ -27,7 +27,6 @@ body {
 
 .flotante {
     text-align: center;
-    border: 1px solid #ccc;
     border-radius: 10px;
     overflow: hidden;
     transition: transform 0.3s, box-shadow 0.3s;

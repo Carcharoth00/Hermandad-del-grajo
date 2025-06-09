@@ -29,7 +29,7 @@ include "../controladores/conexionBBDD.php";
 
 <body>
     <div class="nav-bar" id="nav-bar">
-        <a href="../index.html"><img class="nav-bar-logo" src="../imagenes/nav-bar/hermandad-del-grajo-foto.png"></a>
+        <a href="../security/logout.php"><img class="nav-bar-logo" src="../imagenes/nav-bar/hermandad-del-grajo-foto.png"></a>
         <?php if (isset($_SESSION["log"]) && $_SESSION["log"] == 1): ?>
             <a class="nav-bar-texto-users"
                 href="../security/logout.php"><?php echo htmlspecialchars($_SESSION["nombre"]) . " - Cerrar sesión"; ?></a>
@@ -41,12 +41,12 @@ include "../controladores/conexionBBDD.php";
 
     <div class="contenedor-flotantes">
         <div class="flotante">
-            <a href="./zonaPrivada/notas.php"><img src="../imagenes/privado/nota-adhesiva.png" alt="notas logo"></a>
-            <p>Tus notas <?php echo $_SESSION['id'] ?></p>
+            <a href="./zonaPrivada/notas.php"><img src="../imagenes/privado/icono-notas.png" alt="notas logo"></a>
+            <p>Tus notas</p>
         </div>
         <div class="flotante">
-            <a href="./zonaPrivada/ficha.php"><img src="../imagenes/privado/notas.png" alt="fichas logo"></a>
-            <p>Fichas</p>
+            <a href="./zonaPrivada/ficha.php"><img src="../imagenes/privado/icono-ficha.png" alt="fichas logo"></a>
+            <p>Ficha</p>
         </div>
     </div>
 

@@ -42,6 +42,7 @@ include "../../controladores/conexionBBDD.php";
     </div>
     <section class="layout">
         <div class="listado">
+            <p class="nuevaNota guardar-btn">Crear nota</p>
             <?php
             $filt = $con->prepare("SELECT * FROM notas_" . $_SESSION['id']);
             $filt->execute();
@@ -49,13 +50,12 @@ include "../../controladores/conexionBBDD.php";
             for ($i = 0; $i < $res->num_rows; $i++) {
                 $fila = $res->fetch_assoc();
                 ?>
-                <p class="nombreListaNotas" idNota="<?php echo $fila['ID_nota'] ?>"><?php echo $fila['Nombre_nota'] ?></p>
-                <img src="../../imagenes/iconos/borrar.png" style="width: 30px; height: 30px;" class="borrarNota"
+                <p class="nombreListaNotas" idNota="<?php echo $fila['ID_nota'] ?>">➜ <?php echo $fila['Nombre_nota'] ?></p>
+                <img src="../../imagenes/iconos/borrar.png" style="width: 30px; height: 30px; text-align:right;" class="borrarNota"
                     id="borrar_<?php echo $fila['ID_nota'] ?>">
                 <?php
             }
             ?>
-            <p class="nuevaNota">Crear nueva nota</p>
         </div>
         <div class="cuerpo"></div>
 

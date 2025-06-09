@@ -21,6 +21,8 @@ body {
   margin: 0;
 }
 
+
+
 .cd-header {
   position: relative;
   height: 100%;
@@ -36,7 +38,7 @@ body {
     font-size: 2.2rem;
     font-family: var(--primary-font);
     left: 50%;
-    top: 65%;
+    top: 70%;
     bottom: auto;
     right: auto;
     transform: translateX(-50%) translateY(-50%);
@@ -134,3 +136,97 @@ ul {
   letter-spacing: 2px;
 }
 
+.nav-mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 900px) {
+  nav.nav-desktop {
+    display: none !important;
+  }
+  .cd-fixed-background.img-1 {
+  background-image: url("../imagenes/personajes/Movil/fondo-vi-movil.jpg");
+}
+
+.cd-fixed-background.img-2 {
+  background-image: url("../imagenes/personajes/Movil/fondo-pipa-movil.jpg");
+}
+
+.cd-fixed-background.img-3 {
+  background-image: url("../imagenes/personajes/Movil/fondo-krentrin-movil.jpg");
+}
+
+.cd-fixed-background.img-4 {
+  background-image: url("../imagenes/personajes/Movil/fondo-kalan-movil.jpg");
+}
+
+.modal-text {
+  display: none;
+}
+
+  nav.nav-mobile {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 75px;
+    background-color: var(--primary-color);
+    z-index: 1000;
+  }
+  #nav-mobile ul {
+    display: none;
+    flex-direction: column;
+    left: 12px;
+    padding: 0;
+    margin: 0;
+  }
+
+  #menu:checked~ul {
+    display: flex;
+  }
+
+  .menu-icon {
+    font-size: 2em;
+    cursor: pointer;
+    display: block;
+    padding: 10px;
+  }
+
+  nav.nav-mobile input:checked~ul {
+    display: block;
+    position: absolute;
+    z-index: 10000 !important;
+  }
+
+  nav.nav-mobile input {
+    display: block;
+  }
+
+  nav.nav-mobile label {
+    box-sizing: border-box;
+    display: inline-block;
+
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    font-weight: bold;
+    text-align: center;
+    user-select: none;
+    position: absolute;
+    z-index: 10001;
+  }
+
+  nav.nav-mobile ul {
+    margin-top: 0;
+    padding: 0;
+  }
+
+  nav.nav-mobile li {
+    display: block;
+    margin: 0;
+    padding: 10px;
+    list-style: none;
+  }
+
+}
