@@ -42,7 +42,7 @@ class funcionesUsuarios
         $userId = filter_var($_SESSION['id'], FILTER_SANITIZE_NUMBER_INT);
         
 
-        $filt = $con->prepare("UPDATE fichas SET 
+        $filt = $con->prepare("INSERT INTO fichas SET 
             charname = '', 
             classlevel = '', 
             background = '', 
