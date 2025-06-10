@@ -28,17 +28,28 @@ include "../controladores/conexionBBDD.php";
 </head>
 
 <body>
-    <div class="nav-bar" id="nav-bar">
-        <a href="../security/logout.php"><img class="nav-bar-logo" src="../imagenes/nav-bar/hermandad-del-grajo-foto.png"></a>
+    <div class="nav-bar nav-desktop" id="nav-bar">
+        <a href="../security/logout.php"><img class="nav-bar-logo"
+                src="../imagenes/nav-bar/hermandad-del-grajo-foto.png"></a>
         <?php if (isset($_SESSION["log"]) && $_SESSION["log"] == 1): ?>
             <a class="nav-bar-texto-users"
                 href="../security/logout.php"><?php echo htmlspecialchars($_SESSION["nombre"]) . " - Cerrar sesión"; ?></a>
         <?php else: ?>
-            <a class="nav-bar-texto-users" href="../vistas/iniciarSesion.html">Iniciar sesión</a>
+            <a class="nav-bar-texto-users nav-desktop" href="../vistas/iniciarSesion.html">Iniciar sesión</a>
         <?php endif; ?>
-        <!--Hay que rehacer la barra de navegación para las necesidades de la parte privada. Y cada vez que vuelves a la web o cierra la sesión o hacer cookies si da tiempo. -->
     </div>
-
+    <nav class="nav-mobile" id="nav-mobile">
+        <input type="checkbox" id="menu" style="display:none;">
+        <label for="menu" class="menu-icon">☰</label>
+        <ul>
+            <?php if (isset($_SESSION["log"]) && $_SESSION["log"] == 1): ?>
+                <li><a class="nav-bar-texto-users"
+                    href="../security/logout.php"><?php echo htmlspecialchars($_SESSION["nombre"]) . " - Cerrar sesión"; ?></a></li>
+            <?php else: ?>
+               </li> <a class="nav-bar-texto-users" href="../vistas/iniciarSesion.html">Iniciar sesión</a></li>
+            <?php endif; ?>
+        </ul>
+    </nav>
     <div class="contenedor-flotantes">
         <div class="flotante">
             <a href="./zonaPrivada/notas.php"><img src="../imagenes/privado/icono-notas.png" alt="notas logo"></a>

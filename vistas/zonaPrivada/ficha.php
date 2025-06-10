@@ -31,17 +31,30 @@ include "../../controladores/conexionBBDD.php";
 </head>
 
 <body>
-    <div class="nav-bar" id="nav-bar">
-        <a href="../../index.html"><img class="nav-bar-logo"
+    <div class="nav-bar nav-desktop" id="nav-bar">
+        <a href="../../security/logout.php"><img class="nav-bar-logo"
                 src="../../imagenes/nav-bar/hermandad-del-grajo-foto.png"></a>
-        <a class="nav-bar-texto" href="../privado.php">ZONA PRIVADA</a>
+                <a class="nav-bar-texto" href="../privado.php">ZONA PRIVADA</a>
         <?php if (isset($_SESSION["log"]) && $_SESSION["log"] == 1): ?>
-            <a class="nav-bar-texto-users"
+            <a class="nav-bar-texto"
                 href="../../security/logout.php"><?php echo htmlspecialchars($_SESSION["nombre"]) . " - Cerrar sesión"; ?></a>
         <?php else: ?>
-            <a class="nav-bar-texto-users" href="../../vistas/iniciarSesion.html">Iniciar sesión</a>
+            <a class="nav-bar-texto nav-desktop" href="../../vistas/iniciarSesion.html">Iniciar sesión</a>
         <?php endif; ?>
     </div>
+    <nav class="nav-mobile" id="nav-mobile">
+        <input type="checkbox" id="menu" style="display:none;">
+        <label for="menu" class="menu-icon">☰</label>
+        <ul>
+            <li><a class="nav-bar-texto" href="../privado.php">ZONA PRIVADA</a></li>
+            <?php if (isset($_SESSION["log"]) && $_SESSION["log"] == 1): ?>
+                <li><a class="nav-bar-texto"
+                    href="../../security/logout.php"><?php echo htmlspecialchars($_SESSION["nombre"]) . " - Cerrar sesión"; ?></a></li>
+            <?php else: ?>
+               </li> <a class="nav-bar-texto" href="../../vistas/iniciarSesion.html">Iniciar sesión</a></li>
+            <?php endif; ?>
+        </ul>
+    </nav>
     <fieldset>
         <?php
         $filt = $con->prepare("SELECT * FROM fichas WHERE ID_ficha = ?");

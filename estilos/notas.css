@@ -10,7 +10,7 @@
 .layout {
     display: flex;
     flex-direction: row;
-    gap: 20px; 
+    gap: 20px;
 }
 
 html,
@@ -38,50 +38,129 @@ body {
     font-family: var(--primary-font);
 }
 
-textarea.nombreNota{
-    display:block;
-    width:80%;
-    margin-top:5px;
-    padding:15px;
-    margin-bottom:20px;
-    border-radius:20px;
+textarea.nombreNota {
+    display: block;
+    width: 80%;
+    margin-top: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 20px;
 }
 
-textarea.cuerpoNota{
-    display:block;
-    width:80%;
-    min-height:300px;
-    margin-top:5px;
-    padding:15px;
-    border-radius:20px;
+textarea.cuerpoNota {
+    display: block;
+    width: 80%;
+    min-height: 300px;
+    margin-top: 5px;
+    padding: 15px;
+    border-radius: 20px;
 }
 
 .guardar-btn {
-                background: linear-gradient(135deg, #bfa76a 0%, #6b4f1d 100%);
-                color: #f5e6c5;
-                border: 3px solid #7c5c2b;
-                border-radius: 10px;
-                padding: 14px 38px;
-                font-size: 1.2em;
-                font-family: 'Metamorphous', cursive;
-                letter-spacing: 2px;
-                box-shadow: 0 4px 16px rgba(80,60,20,0.25), 0 0 0 4px #e2c275 inset;
-                cursor: pointer;
-                transition: background 0.3s, transform 0.2s;
-                margin-bottom: 20px;
-            }
-            .guardar-btn:hover {
-                background: linear-gradient(135deg, #e2c275 0%, #7c5c2b 100%);
-                transform: translateY(-2px) scale(1.03);
-            }
-            .guardar-btn-content {
-                display: inline-flex;
-                align-items: center;
-            }
-            .guardar-btn-icon {
-                margin-right: 10px;
-            }
-            .guardar-btn-text {
-                text-shadow: 1px 1px 2px #7c5c2b, 0 0 8px #e2c275;
-                
-            }
+    background: linear-gradient(135deg, #bfa76a 0%, #6b4f1d 100%);
+    color: #f5e6c5;
+    border: 3px solid #7c5c2b;
+    border-radius: 10px;
+    padding: 14px 38px;
+    font-size: 1.2em;
+    font-family: 'Metamorphous', cursive;
+    letter-spacing: 2px;
+    box-shadow: 0 4px 16px rgba(80, 60, 20, 0.25), 0 0 0 4px #e2c275 inset;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    margin-bottom: 20px;
+    overflow: visible;
+}
+
+.guardar-btn:hover {
+    background: linear-gradient(135deg, #e2c275 0%, #7c5c2b 100%);
+    transform: translateY(-2px) scale(1.03);
+}
+
+.guardar-btn-content {
+    display: inline-flex;
+    align-items: center;
+}
+
+.guardar-btn-icon {
+    margin-right: 10px;
+}
+
+.guardar-btn-text {
+    text-shadow: 1px 1px 2px #7c5c2b, 0 0 8px #e2c275;
+
+}
+
+@media only screen and (max-width: 900px) {
+    .nav-desktop {
+        display: none !important;
+    }
+
+    nav.nav-mobile {
+        display: block;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 75px;
+        z-index: 1000;
+    }
+
+    #nav-mobile ul {
+        display: none;
+        flex-direction: column;
+        left: 12px;
+        padding: 0;
+        margin: 0;
+        background-color: var(--primary-color);
+
+    }
+
+    #menu:checked~ul {
+        display: flex;
+    }
+
+    .menu-icon {
+        font-size: 2em;
+        cursor: pointer;
+        display: block;
+        padding: 10px;
+    }
+
+    nav.nav-mobile input:checked~ul {
+        display: block;
+        position: absolute;
+        z-index: 10000 !important;
+    }
+
+    nav.nav-mobile input {
+        display: block;
+    }
+
+    nav.nav-mobile label {
+        box-sizing: border-box;
+        display: inline-block;
+
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        font-weight: bold;
+        text-align: center;
+        user-select: none;
+        position: absolute;
+        z-index: 10001;
+    }
+
+    nav.nav-mobile ul {
+        margin-top: 0;
+        padding: 0;
+    }
+
+    nav.nav-mobile li {
+        display: block;
+        margin: 0;
+        padding: 10px;
+        list-style: none;
+    }
+
+}
