@@ -58,7 +58,7 @@ for ($i = 0; $i < $res->num_rows; $i++) {
         $(".cuerpoNota").change(function () {
             let ids = $(this).data("laid");
             let opt = 0;
-            let nombreNota = $("#nweNombreNota_" + ids).val();
+            let nombreNota = $("#newNombreNota_" + ids).val();
             let cuerpoNota = $("#newCuerpoNota_" + ids).val();
 
             $.ajax({
