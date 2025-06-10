@@ -220,6 +220,7 @@ ul {
   nav.nav-mobile ul {
     margin-top: 0;
     padding: 0;
+    background-color: var(--primary-color);
   }
 
   nav.nav-mobile li {

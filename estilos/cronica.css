@@ -75,5 +75,14 @@ html {
     nav.nav-mobile {
         background-color: transparent !important;
     }
+    
+    #nav-mobile ul {
+    display: none;
+    flex-direction: column;
+    left: 12px;
+    padding: 0;
+    margin: 0;
+    background-color: var(--primary-color);
+  }
 }
 
